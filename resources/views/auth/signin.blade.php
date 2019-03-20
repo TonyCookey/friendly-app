@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-6 offset-lg-3">
         <h2>Friendly Social Network</h2>
-        <h2 class="text-muted">Sign in </h2>
+        <h2>Sign in </h2>
 <form action="{{route('auth.signin')}}" method="post" role="form">
        {{ csrf_field() }}
 <div class="form-group">     
