@@ -4,7 +4,9 @@
    
 <div class="row">
     <div class="col-lg-6 offset-lg-3">
-        <h1> Sign up </h2>
+     
+      
+        <h2> Sign up </h2>
         
         <form action="{{route('auth.signup')}}" method="post">    
             {{ csrf_field() }}        
