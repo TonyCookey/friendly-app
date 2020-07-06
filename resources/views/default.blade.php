@@ -118,7 +118,7 @@
 <body>
     @include('partials.nav')
 
-    <div class="container-fluid">
+    <div class="container">
         @include('partials.alert') @yield('content')
     </div>
 
