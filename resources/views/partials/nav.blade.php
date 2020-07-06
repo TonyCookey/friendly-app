@@ -1,13 +1,15 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-{{Auth::check() ? Auth::user()->theme : 'primary' }}" style="margin-bottom:20px;">
+<nav class="navbar navbar-dark navbar-expand-md bg-{{Auth::check() ? Auth::user()->theme : 'primary' }}" >
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}" style="font-family: 'Pacifico', cursive; font-size:30px;">Friendly</a>
+        {{--
+        <a class="navbar-brand" href="{{route('home')}}" style="font-family: 'Pacifico', cursive; font-size:30px;">Friendly</a> --}}
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
             @if (Auth::check())
-            <ul class="nav navbar-nav" style="font-family: 'Dancing Script', cursive; font-size:20px;">
+            <ul class="nav navbar-nav" style=" font-size:20px;">
                 <!-- <li class="nav-item mynavitems active" role="presentation"><a class="nav-link" href="#">    Home    </a></li>-->
                 @if (Auth::user()->friendRequests()->count())
                 <li class="nav-item mynavitems active" role="presentation">
@@ -34,7 +36,7 @@
             @endif
 
 
-            <ul class="nav navbar-nav ml-auto" style="font-family: 'Kaushan Script', cursive; font-size:18px;">
+            <ul class="nav navbar-nav ml-auto" style="font-size:18px;">
                 @if (Auth::check())
                 <li class="nav-item mynavitems " role="presentation">
                     <a class="nav-link text-capitalize" href="{{route('profile.index', ['username' => Auth::user()->name ])}}">{{Auth::user()->getNameOrUsername() }}</a>
@@ -46,7 +48,7 @@
                     <a class="btn btn-outline-light action-btn" href="{{route('auth.signout')}}">Sign out</a>
                 </li>
                 <!--<li class="dropdown active"><a class="btn btn-outline-light action-btn dropdown-toggle nav-link dropdown-toggle  mynavitems" data-toggle="dropdown" aria-expanded="false" href="#"> </a>
-					
+
                         <div class="dropdown-menu" role="menu">
 						        <a class="dropdown-item" role="presentation" href="">Sign Out</a>
 						        <a class="dropdown-item" role="presentation" href="#">Profile</a>

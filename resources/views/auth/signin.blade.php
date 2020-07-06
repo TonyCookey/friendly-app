@@ -1,8 +1,12 @@
-@extends('default') @section('content')
-<div class="row">
-    <div class="col-lg-6 offset-lg-3">
-        <h2>Friendly Social Network</h2>
-        <h2 class="text-muted">Sign in </h2>
+@extends('welcome') @section('content')
+<div class="row full-height">
+    <div class="col-lg-4 col-sm-12 col-xs-12" style="padding:10vh 10vh; ">
+
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="img/3.jpg" alt="Friendly Logo" height="200" width="200">
+        </div>
+    <!-- <h2 class="text-center text-primary">Login </h2> -->
+
         <form action="{{route('auth.signin')}}" method="post" role="form">
             {{ csrf_field() }}
             <div class="form-group">
@@ -33,14 +37,19 @@
             </div>
             <div class="form-group">
 
-                <button type="submit" class="btn btn-large btn-primary btn-block"> Sign in</button>
+                <button type="submit" class="btn btn-large btn-outline-primary btn-block"> Sign in</button>
 
             </div>
 
         </form>
+        <div class="text-center">
+        <span class="">Don't have an account yet? <a href="{{route('auth.signup')}}">Sign up</a></span>
+        </div>
+
     </div>
-    {{--
-    <div class="col-lg-3">
-        <h3>Tstng</h3>
-        <img src="/img/multicolour-gradient.jpg"> </div>
-</div> --}} @endsection
+
+    <div class="col-lg-8 d-xs-none" id="bk-image">
+        <div class="row">
+
+        </div>
+    </div> @endsection
