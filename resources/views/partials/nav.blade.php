@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-{{Auth::check() ? Auth::user()->theme : 'primary' }}" >
+<nav class="navbar navbar-dark navbar-expand-md bg-{{Auth::check() ? Auth::user()->theme : 'primary' }}" style="margin-bottom:20px;" >
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}" style="font-family: 'Pacifico', cursive; font-size:30px;">Friendly</a>
         {{--
