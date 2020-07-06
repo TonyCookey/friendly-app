@@ -59,10 +59,6 @@
 
         }
 
-        a {
-            font-family: 'Carrois Gothic', sans-serif;
-
-        }
         h6 {
             font-family: 'Carrois Gothic', sans-serif;
             text-decoration: none;
