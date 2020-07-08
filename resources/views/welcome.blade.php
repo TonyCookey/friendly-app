@@ -117,6 +117,14 @@
         .full-height{
             height:100vh;
         }
+        .alert {
+            position: absolute;
+            /* padding: .75rem 1.25rem; */
+            margin-bottom: 2rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            right: 5vh;
+        }
 
     </style>
 </head>
@@ -125,7 +133,7 @@
     <!-- @include('partials.nav') -->
 
     <div class="container-fluid">
-        @include('partials.alert') @yield('content')
+        @include('partials.auth-alert') @yield('content')
     </div>
 
 

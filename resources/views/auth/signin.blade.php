@@ -32,7 +32,7 @@
             <div class="form-group">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1" name="remember">
-                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                    <label class="custom-control-label" for="customCheck1" style="padding-top:3px;">Remember me</label>
                 </div>
             </div>
             <div class="form-group">
